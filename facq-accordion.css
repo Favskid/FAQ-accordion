@@ -1,0 +1,121 @@
+:root { 
+    /* Colors */
+    --White: hsl(0, 100%, 100%);
+    --purple-100: hsl(275, 100%, 97%);
+    --urple-600: hsl(292, 16%, 49%);
+    --Purple-950: hsl(292, 42%, 14%);
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--purple-100);
+    background-image: url("./assets/images/background-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+}
+
+main {
+    font-family: "Work Sans";
+    margin-top: 12rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 25px;
+    background-color: var(--White);
+    border-radius: 14px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.heading img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.heading .faqs {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--Purple-950);
+}
+
+.second-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.second-section span {
+    display: flex;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-question h2 {
+  font-size: 15px;
+  flex: 1;
+  font-weight: 600;
+}
+
+.toggle-btn {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.faq-answer {
+  display: none; /* Hide answers by default */
+  margin-top: 0.5rem;
+  color: var(--urple-600);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.custom-hr {
+  height: 1px;
+  background: var(--purple-100);
+  width: 100%;
+  border-radius: 2px;
+  margin: 13px 0;
+}
+
+
+.attribution { font-size: 11px; text-align: center; padding-top: 1rem }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 768px) {
+    body {
+        background-image: url("./assets/images/background-pattern-desktop.svg");
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 30rem;
+        margin-right: 30rem;
+
+    }
+    
+    .faq-question br {
+      display: none;
+    }
+}
